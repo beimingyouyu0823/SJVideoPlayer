@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '9.0'
     s.source       = { :git => 'https://github.com/changsanjiang/SJVideoPlayer.git', :tag => "v#{s.version}" }
     s.requires_arc = true
+    # 修改依赖
     s.dependency 'SJBaseVideoPlayer', '>= 3.7.3'
 
     s.source_files = 'SJVideoPlayer/*.{h,m}'
