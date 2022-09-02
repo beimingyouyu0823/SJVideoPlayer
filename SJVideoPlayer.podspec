@@ -11,14 +11,16 @@ Pod::Spec.new do |s|
     s.source       = { :git => 'https://github.com/changsanjiang/SJVideoPlayer.git', :tag => "v#{s.version}" }
     s.requires_arc = true
     # 修改依赖
-    s.dependency 'SJBaseVideoPlayer', '>= 3.7.3'
+#    s.dependency 'SJBaseVideoPlayer', '>= 3.7.3'
+    s.dependency 'SJBaseVideoPlayer', :git => 'https://github.com/beimingyouyu0823/SJBaseVideoPlayer.git'
 
     s.source_files = 'SJVideoPlayer/*.{h,m}'
     
     s.subspec 'Common' do |ss|
       ss.source_files = 'SJVideoPlayer/Common/**/*'
       ss.dependency 'Masonry'
-      ss.dependency 'SJBaseVideoPlayer'
+#      ss.dependency 'SJBaseVideoPlayer'
+      ss.dependency 'SJBaseVideoPlayer', :git => 'https://github.com/beimingyouyu0823/SJBaseVideoPlayer.git'
       ss.dependency 'SJUIKit/AttributesFactory'
       ss.dependency 'SJVideoPlayer/ResourceLoader'
     end
